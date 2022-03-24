@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  tut-bot:
+    build:
+      context: ./tut-bot
+      dockerfile: Dockerfile
+    environment:
+      PORT: 80
+      LOG_LEVEL: all
+      TOKEN: ${TOKEN}
+      SECRET: ${SECRET}
+      ROOT: /app
+      BACKEND_SERVER_URI_BASE: ${BACKEND_SERVER_URI_BASE}
